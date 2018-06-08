@@ -1,29 +1,29 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "luacov"
-version = "0.12.0-1"
+version = "0.13.0-1"
 -- LuaDist source
 source = {
-  tag = "0.12.0-1",
+  tag = "0.13.0-1",
   url = "git://github.com/LuaDist-testing/luacov.git"
 }
 -- Original source
 -- source = {
---    url = "git://github.com/keplerproject/luacov",
---    tag = "v0.12.0"
+--    url = "git+https://github.com/keplerproject/luacov.git",
+--    tag = "v0.13.0"
 -- }
 description = {
    summary = "Coverage analysis tool for Lua scripts",
    detailed = [[
-      LuaCov is a simple coverage analysis tool for Lua scripts.
-      When a Lua script is run with the luacov module, it
-      generates a stats file. The luacov command-line script then
-      processes this file generating a report indicating which code
-      paths were not traversed, which is useful for verifying the
-      effectiveness of a test suite.
+LuaCov is a simple coverage analysis tool for Lua scripts.
+When a Lua script is run with the luacov module, it
+generates a stats file. The luacov command-line script then
+processes this file generating a report indicating which code
+paths were not traversed, which is useful for verifying the
+effectiveness of a test suite.
    ]],
-   homepage = "http://keplerproject.github.io/luacov/",
-   license = "MIT/X11"
+   homepage = "https://keplerproject.github.io/luacov/",
+   license = "MIT"
 }
 dependencies = {
    "lua >= 5.1, < 5.4"
@@ -34,6 +34,7 @@ build = {
       luacov = "src/luacov.lua",
       ["luacov.defaults"] = "src/luacov/defaults.lua",
       ["luacov.hook"] = "src/luacov/hook.lua",
+      ["luacov.linescanner"] = "src/luacov/linescanner.lua",
       ["luacov.reporter"] = "src/luacov/reporter.lua",
       ["luacov.reporter.default"] = "src/luacov/reporter/default.lua",
       ["luacov.runner"] = "src/luacov/runner.lua",
